@@ -1,28 +1,27 @@
 var ageInput = document.getElementById('ageInput');
 var outputBox = document.getElementById('outputBox');
-var Btn=document.getElementById('btn');
-var hideWala=document.getElementById('hidewala');
+var Loader = document.querySelector('.loader');
+var btn = document.getElementById('btn');
 
-Btn.addEventListener("click",function(){
+btn.addEventListener("click", function() {
+  
+   Loader.style.display='block';
+  
+
    setTimeout(function(){
-      document.getElementById('hidewala').style.display = 'none';
-      display()
-   },5000)
+      display();
+   }, 3000);
 
-})
-
+    })
 
 
-function display(){
 
-var age=parseInt(ageInput.value)
+function display() {
+    var age = parseInt(ageInput.value);
 
-if(18<age){
-   outputBox.innerText=" YOU ARE ELIGIBLE :) ";
+    if (age >= 18) {
+        outputBox.innerText = "YOU ARE ELIGIBLE :)";
+    } else {
+        outputBox.innerText = "YOU ARE NOT ELIGIBLE :(";
+    }
 }
-else{
-   outputBox.innerText="YOU ARE NOT ELIGIBLE :(";
-}
-
-}
-
