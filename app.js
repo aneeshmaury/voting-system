@@ -7,7 +7,9 @@ btn.addEventListener("click", function() {
   
    Loader.style.display='block';
   
-
+   setTimeout(() => {
+    Loader.style.display='none'
+   }, 3000);
    setTimeout(function(){
       display();
    }, 3000);
